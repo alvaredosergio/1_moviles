@@ -7,8 +7,16 @@ import java.util.Scanner;
 
 public class GameWorking {
     public static void main(String[] args) {
-        System.out.println("Welcome to 6x6 colors Game.");
+        System.out.println("\r"
+        + "  ____       ____              __                  _____                \r\n"
+        + " / __/__ __ / __/  ____ ___   / /___   ____ ___   / ___/___ _ __ _  ___ \r\n"
+        + "/ _ \\ \\ \\ // _ \\  / __// _ \\ / // _ \\ / __/(_-<  / (_ // _ `//  ' \\/ -_)\r\n"
+        + "\\___//_\\_\\ \\___/  \\__/ \\___//_/ \\___//_/  /___/  \\___/ \\_,_//_/_/_/\\__/ \r\n"
+        + "                                                                        "
+        + "");
         System.out.println("You must to complete the 6x6 square like the 2x2 patron.");
+        System.out.println("Choose what COLUMN or ROW you wanna move: ('c1' = Column 1, 'r1' = Row 1, etc...)");
+        System.out.println("GOOD LUCK!!\n");
 
         // Colors codes
         String reset = "\u001B[0m";
@@ -109,7 +117,7 @@ public class GameWorking {
 
         // Infinite loop to execute the program
         while (true) {
-            System.out.println("Choose what COLUMN or ROW you wanna move: ('c1' = Column 1, 'r1' = Row 1, etc...)");
+            System.out.println("Choose COLUMN or ROW:");
             Scanner sc = new Scanner(System.in);
             String option = sc.nextLine();
 
