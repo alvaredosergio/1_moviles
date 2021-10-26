@@ -130,6 +130,9 @@ public class Game {
             {bl,bl,bl,br,br,br}
         };
 
+        // Scanner to introduce the decision
+        Scanner sc = new Scanner(System.in);
+
         // Infinite loop to execute the program
         while (matrix != compMatrix){
 
@@ -139,7 +142,7 @@ public class Game {
             }
 
             System.out.println("Choose COLUMN or ROW:");
-            Scanner sc = new Scanner(System.in);
+            
             String option = sc.nextLine();
 
             // Switch for all columns or rows decision
@@ -336,6 +339,7 @@ public class Game {
             System.out.print(reset);
         }
 
+        sc.close();
         // Print the Congratulations !
         System.out.println();
         System.out.println("CONGRATULATIONS !!");
