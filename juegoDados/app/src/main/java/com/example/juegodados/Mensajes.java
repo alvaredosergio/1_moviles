@@ -29,19 +29,17 @@ public class Mensajes extends AppCompatActivity {
         String color = i.getStringExtra("color");
 
 
-        if(estado.equals("1")){
+        if (estado.equals("1")) {
             boton.setVisibility(View.VISIBLE);
             texto.setVisibility(View.GONE);
-        }else  {
+        } else {
             texto.setText(estado);
-            if(color.equals("verde")) {
+            if (color.equals("verde")) {
                 texto.setTextColor(Color.GREEN);
-            }else{
+            } else {
                 texto.setTextColor(Color.RED);
             }
         }
-
-
 
         boton.setOnClickListener(view -> Toast.makeText(this, "Has conseguido una puntuanción mayor de 40. Enhorabuena", Toast.LENGTH_SHORT).show());
     }

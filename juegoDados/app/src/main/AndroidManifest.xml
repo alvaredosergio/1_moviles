@@ -13,7 +13,7 @@
             android:name=".Mensajes"
             android:exported="true" />
         <activity
-            android:name=".JuegoDados"
+            android:name=".dicesGame"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
