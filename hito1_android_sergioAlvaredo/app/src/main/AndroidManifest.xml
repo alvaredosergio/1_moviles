@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.ejercicioclase_sergio_alvaredo">
 
     <application
@@ -10,10 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EjercicioClase_sergio_alvaredo">
         <activity
+            android:name=".Mensajes"
+            android:exported="true" />
+        <activity
+            android:name=".Dados"
+            android:exported="true" />
+        <activity
             android:name=".Formulario"
             android:exported="true" />
         <activity
-            android:name=".Intent1"
+            android:name=".Main"
             android:exported="true" />
         <activity
             android:name=".Calculadora"

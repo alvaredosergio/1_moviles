@@ -1,9 +1,10 @@
 package com.example.ejercicioclase_sergio_alvaredo;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Formulario extends AppCompatActivity {
     TextView nom, apel, tlf, captcha, code;

@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button f_btn = findViewById(R.id.add_btn);
-        f_btn.setOnClickListener(new View.OnClickListener()){
+        f_btn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 getSupportFragmentManager()
                         .beginTransaction()

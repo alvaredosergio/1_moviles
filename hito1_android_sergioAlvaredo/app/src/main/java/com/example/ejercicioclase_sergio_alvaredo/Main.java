@@ -1,10 +1,11 @@
 package com.example.ejercicioclase_sergio_alvaredo;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class Intent1 extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Main extends AppCompatActivity {
 
     Button btn;
 
@@ -19,6 +20,9 @@ public class Intent1 extends AppCompatActivity {
         btn = findViewById(R.id.btn2);
         btn.setOnClickListener(view -> cambiarFormulario());
 
+        btn = findViewById(R.id.btn3);
+        btn.setOnClickListener(view -> cambiarDados());
+
     }
 
     public void cambiarCalculadora() {
@@ -28,6 +32,11 @@ public class Intent1 extends AppCompatActivity {
 
     public void cambiarFormulario() {
         android.content.Intent starter = new android.content.Intent(this, Formulario.class);
+        startActivity(starter);
+    }
+
+    public void cambiarDados() {
+        android.content.Intent starter = new android.content.Intent(this, Dados.class);
         startActivity(starter);
     }
 
