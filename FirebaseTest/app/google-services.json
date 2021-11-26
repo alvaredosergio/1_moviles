@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "621364368507",
+    "firebase_url": "https://humanes-alvaredo-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "humanes-alvaredo",
+    "storage_bucket": "humanes-alvaredo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621364368507:android:c9b17bc1c5b81b50eafede",
+        "android_client_info": {
+          "package_name": "com.example.ejercicioclase_sergio_alvaredo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621364368507-cfgfg8pmd3uvh2den745msfmmjfteg0g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfXiHkOkrC-4-BIb1cmiK6E_rpgszho3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621364368507-cfgfg8pmd3uvh2den745msfmmjfteg0g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621364368507:android:9a01693214cfaadfeafede",
+        "android_client_info": {
+          "package_name": "com.example.firebasetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621364368507-cfgfg8pmd3uvh2den745msfmmjfteg0g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfXiHkOkrC-4-BIb1cmiK6E_rpgszho3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621364368507-cfgfg8pmd3uvh2den745msfmmjfteg0g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
