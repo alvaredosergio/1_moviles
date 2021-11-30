@@ -7,6 +7,7 @@
     tools:context=".Juego">
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:divider="@drawable/divider"
@@ -20,40 +21,45 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:divider="@drawable/divider"
-            android:showDividers="middle"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:showDividers="middle">
 
-            <Button
-                android:id="@+id/btn2"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/boton_redondo" />
+            <ImageButton
+                android:id="@+id/boton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                app:srcCompat="@drawable/boton_redondo_rojo" />
 
-            <Button
-                android:id="@+id/btn1"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/boton_redondo" />
+            <ImageButton
+                android:id="@+id/boton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                app:srcCompat="@drawable/boton_redondo_rojo" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:divider="@drawable/divider"
-            android:showDividers="middle"
-            android:layout_height="match_parent">
+            android:showDividers="middle">
 
-            <Button
-                android:id="@+id/btn4"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/boton_redondo" />
+            <ImageButton
+                android:id="@+id/boton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                app:srcCompat="@drawable/boton_redondo_rojo" />
 
-            <Button
-                android:id="@+id/btn3"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/boton_redondo" />
+            <ImageButton
+                android:id="@+id/boton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                app:srcCompat="@drawable/boton_redondo_rojo" />
+
         </TableRow>
 
     </TableLayout>
