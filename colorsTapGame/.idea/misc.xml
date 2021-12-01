@@ -4,26 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo.xml" value="0.3671875" />
+        <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_amarillo.xml" value="0.3671875" />
+        <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_amarillo_claro.xml" value="0.3671875" />
+        <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_azul.xml" value="0.3671875" />
+        <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_azul_claro.xml" value="0.2109375" />
+        <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_rojo.xml" value="0.3671875" />
+        <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_rojo_claro.xml" value="0.3671875" />
+        <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_verde.xml" value="0.3671875" />
+        <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_verde_claro.xml" value="0.3671875" />
         <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/divider.xml" value="0.3671875" />
         <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3671875" />
-        <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_juego.xml" value="0.33469202898550726" />
+        <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_juego.xml" value="0.25" />
         <entry key="..\:/Users/Campus FP/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_menu.xml" value="0.33469202898550726" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo.xml" value="0.3828125" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_amarillo.xml" value="0.3828125" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_amarillo_claro.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_azul.xml" value="0.33" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_azul_claro.xml" value="0.2791666666666667" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_rojo.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_rojo_claro.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_verde.xml" value="0.3828125" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_verde_claro.xml" value="0.2791666666666667" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/colors.xml" value="0.3828125" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/divider.xml" value="0.3828125" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_juego.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_leaderboard.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_menu.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/fragment_registro.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
