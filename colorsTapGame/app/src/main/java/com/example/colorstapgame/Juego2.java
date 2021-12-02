@@ -2,29 +2,27 @@ package com.example.colorstapgame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-public class Juego extends AppCompatActivity {
+public class Juego2 extends AppCompatActivity {
     ImageButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
     private TextView temp;
     private TextView textSeg;
-    private int puntuacion;
+    public static int puntuacion;
     private TextView textoPuntos;
     private CountDownTimer cdt;
-    private long timeLeftInMilliseconds = 6000; // 6 segundos
+    private long timeLeftInMilliseconds = 11000; // 11 segundos
     private boolean timeRunning;
 
     final int rojo = R.drawable.boton_redondo_rojo;
@@ -35,6 +33,14 @@ public class Juego extends AppCompatActivity {
     final int verdeClaro = R.drawable.boton_redondo_verde_claro;
     final int amarillo = R.drawable.boton_redondo_amarillo;
     final int amarilloClaro = R.drawable.boton_redondo_amarillo_claro;
+    final int marron = R.drawable.boton_redondo_marron;
+    final int marronClaro = R.drawable.boton_redondo_marron_claro;
+    final int naranja = R.drawable.boton_redondo_naranja;
+    final int naranjaClaro = R.drawable.boton_redondo_naranja_claro;
+    final int rosa = R.drawable.boton_redondo_rosa;
+    final int rosaClaro = R.drawable.boton_redondo_rosa_claro;
+    final int verd = R.drawable.boton_redondo_verd;
+    final int verdClaro = R.drawable.boton_redondo_verd_claro;
 
     int ultimoColor = -1;
 
@@ -73,6 +79,7 @@ public class Juego extends AppCompatActivity {
         timeLeftText = "" + seconds;
         temp.setText(timeLeftText);
         if (timeLeftText.equals("0")) {
+            Registro.punt = puntuacion;
             btn1.setEnabled(false);
             btn2.setEnabled(false);
             btn3.setEnabled(false);
@@ -85,6 +92,7 @@ public class Juego extends AppCompatActivity {
             temp.setText("PERDISTE");
             temp.setTextColor(Color.rgb(168,0,0));
             textSeg.setVisibility(View.INVISIBLE);
+            startActivity(new Intent(Juego2.this,Registro.class));
 
         }
     }
@@ -115,72 +123,105 @@ public class Juego extends AppCompatActivity {
         btn9 = findViewById(R.id.b9);
         textoPuntos = findViewById(R.id.puntos);
 
-        generarBotones();
+        shuffleButtons();
+
     }
 
-    public void generarBotones (){
+    public void shuffleButtons(){
+        Random rn = new Random((new Date()).getTime());
+        int r = rn.nextInt(8);
         List<ImageButton> botones = Arrays.asList(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9);
-        List<Integer> colores = Arrays.asList(rojo,amarillo,verde,azul);
-        Random r = new Random();
-        int rn = colores.get(r.nextInt(colores.size()));
-        // Color Random
-        Collections.shuffle(botones);
-        if(rn == rojo){
-            botones.get(0).setImageResource(rojoClaro);
-            botones.get(1).setImageResource(rn);
-            botones.get(2).setImageResource(rn);
-            botones.get(3).setImageResource(rn);
-            botones.get(4).setImageResource(rn);
-            botones.get(5).setImageResource(rn);
-            botones.get(6).setImageResource(rn);
-            botones.get(7).setImageResource(rn);
-            botones.get(8).setImageResource(rn);
+
+        if(r == ultimoColor){
+            if(r != 8){
+                r = 0;
+            }else{
+                r++;
+            }
+        }
+
+        if (r == 0) {
+            //Amarillo
+            colorChange(botones,amarillo,amarilloClaro);
             botones.get(0).setOnClickListener(view -> {
                 sumarPuntos();
                 cdt.start();
+                shuffleButtons();
             });
-        }else if(rn == amarillo) {
-            botones.get(0).setImageResource(amarilloClaro);
-            botones.get(1).setImageResource(rn);
-            botones.get(2).setImageResource(rn);
-            botones.get(3).setImageResource(rn);
-            botones.get(4).setImageResource(rn);
-            botones.get(5).setImageResource(rn);
-            botones.get(6).setImageResource(rn);
-            botones.get(7).setImageResource(rn);
-            botones.get(8).setImageResource(rn);
+
+        } else if (r == 1) {
+            //Rojo
+            colorChange(botones,rojo,rojoClaro);
             botones.get(0).setOnClickListener(view -> {
                 sumarPuntos();
                 cdt.start();
+                shuffleButtons();
             });
-        }else if(rn == azul){
-            botones.get(0).setImageResource(azulClaro);
-            botones.get(1).setImageResource(rn);
-            botones.get(2).setImageResource(rn);
-            botones.get(3).setImageResource(rn);
-            botones.get(4).setImageResource(rn);
-            botones.get(5).setImageResource(rn);
-            botones.get(6).setImageResource(rn);
-            botones.get(7).setImageResource(rn);
-            botones.get(8).setImageResource(rn);
+
+        } else if (r == 2) {
+            //Verde
+            colorChange(botones,verde,verdeClaro);
             botones.get(0).setOnClickListener(view -> {
                 sumarPuntos();
                 cdt.start();
+                shuffleButtons();
             });
-        }else if(rn == verde){
-            botones.get(0).setImageResource(verdeClaro);
-            botones.get(1).setImageResource(rn);
-            botones.get(2).setImageResource(rn);
-            botones.get(3).setImageResource(rn);
-            botones.get(4).setImageResource(rn);
-            botones.get(5).setImageResource(rn);
-            botones.get(6).setImageResource(rn);
-            botones.get(7).setImageResource(rn);
-            botones.get(8).setImageResource(rn);
+
+        } else if (r == 3) {
+            //Azul
+            colorChange(botones,azul,azulClaro);
             botones.get(0).setOnClickListener(view -> {
                 sumarPuntos();
                 cdt.start();
+                shuffleButtons();
+            });
+
+        } else if (r == 4) {
+            //Rojo
+            colorChange(botones,marron,marronClaro);
+            botones.get(0).setOnClickListener(view -> {
+                sumarPuntos();
+                cdt.start();
+                shuffleButtons();
+            });
+        } else if (r == 5) {
+            //Rojo
+            colorChange(botones,naranja,naranjaClaro);
+            botones.get(0).setOnClickListener(view -> {
+                sumarPuntos();
+                cdt.start();
+                shuffleButtons();
+            });
+        } else if (r == 6) {
+            //Rojo
+            colorChange(botones,rosa,rosaClaro);
+            botones.get(0).setOnClickListener(view -> {
+                sumarPuntos();
+                cdt.start();
+                shuffleButtons();
+            });
+        } else if (r == 7) {
+            //Rojo
+            colorChange(botones,verd,verdClaro);
+            botones.get(0).setOnClickListener(view -> {
+                sumarPuntos();
+                cdt.start();
+                shuffleButtons();
             });
         }
+        ultimoColor = r;
+    }
+
+    public void colorChange(List <ImageButton> colores, int colorComun, int colorCorrecto){
+        Collections.shuffle(colores);
+        colores.get(0).setImageResource(colorCorrecto);
+        colores.get(1).setImageResource(colorComun);
+        colores.get(2).setImageResource(colorComun);
+        colores.get(3).setImageResource(colorComun);
+        colores.get(4).setImageResource(colorComun);
+        colores.get(5).setImageResource(colorComun);
+        colores.get(6).setImageResource(colorComun);
+        colores.get(7).setImageResource(colorComun);
+        colores.get(8).setImageResource(colorComun);
     }
 }

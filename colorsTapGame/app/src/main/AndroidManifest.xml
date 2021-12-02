@@ -11,7 +11,13 @@
         android:theme="@style/Theme.ColorsTapGame">
         <activity
             android:name=".Leaderboard"
-            android:exported="false" />
+            android:exported="true" />
+        <activity
+            android:name=".Registro"
+            android:exported="true" />
+        <activity
+            android:name=".Juego2"
+            android:exported="true" />
         <activity
             android:name=".Juego"
             android:exported="true" />
