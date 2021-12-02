@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -15,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Registro extends AppCompatActivity {
-    private EditText nombre, correo;
+    private EditText nombre, color;
     private Button btn;
     private DatabaseReference mDatabase;
 
@@ -27,7 +28,7 @@ public class Registro extends AppCompatActivity {
         setContentView(R.layout.activity_registro);
 
         nombre = findViewById(R.id.editTextName);
-        correo = findViewById(R.id.editTextTextEmail);
+        color = findViewById(R.id.editTextTextColor);
         btn = findViewById(R.id.regBot);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -36,15 +37,19 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String nomb = nombre.getText().toString();
-                String email = correo.getText().toString();
+                String col = color.getText().toString();
+                if(!nomb.isEmpty() && !col.isEmpty()) {
 
-                Map<String,Object> datosUsuario = new HashMap<>();
-                datosUsuario.put("nombre",nomb);
-                datosUsuario.put("email",email);
-                datosUsuario.put("puntuacion",punt);
+                    Map<String, Object> datosUsuario = new HashMap<>();
+                    datosUsuario.put("nombre", nomb);
+                    datosUsuario.put("color", col);
+                    datosUsuario.put("puntuacion", punt);
 
-                mDatabase.child("Usuario").push().setValue(datosUsuario);
-                startActivity(new Intent(Registro.this, Leaderboard.class));
+                    mDatabase.child("Usuario").push().setValue(datosUsuario);
+                    startActivity(new Intent(Registro.this, Leer.class));
+                }else{
+                    Toast.makeText(Registro.this, "Debes completar todos los campos.", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });

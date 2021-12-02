@@ -17,14 +17,14 @@ public class Menu extends AppCompatActivity {
         btn_jugar.setOnClickListener(view -> cambiarJuego());
 
         btn_leaderboard = findViewById(R.id.leaderboard);
-        btn_leaderboard.setOnClickListener(view -> cambiarLeaderboard());
+        btn_leaderboard.setOnClickListener(view -> cambiarLeer());
     }
     public void cambiarJuego() {
         android.content.Intent starter = new android.content.Intent(this, Juego2.class);
         startActivity(starter);
     }
-    public void cambiarLeaderboard() {
-        android.content.Intent starter = new android.content.Intent(this, Leaderboard.class);
+    public void cambiarLeer() {
+        android.content.Intent starter = new android.content.Intent(this, Leer.class);
         startActivity(starter);
     }
 }

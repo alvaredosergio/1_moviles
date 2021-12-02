@@ -71,7 +71,7 @@ public class Leaderboard extends AppCompatActivity {
                     for (DataSnapshot ds: dataSnapshot.getChildren()) {
                         String name = ds.child("nombre").getValue().toString();
                         String correo = ds.child("email").getValue().toString();
-                        String score = ds.child("puntuacion").getValue().toString();
+                        int score = Integer.parseInt(ds.child("puntuacion").getValue().toString());
 
                         mMensajesList.add(new User(name,correo,score));
                     }

@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ColorsTapGame">
         <activity
-            android:name=".Leaderboard"
+            android:name=".MostrarColores"
+            android:exported="true" />
+        <activity
+            android:name=".Leer"
             android:exported="true" />
         <activity
             android:name=".Registro"

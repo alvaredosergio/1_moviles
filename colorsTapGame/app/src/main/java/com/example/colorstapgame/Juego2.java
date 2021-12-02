@@ -80,15 +80,7 @@ public class Juego2 extends AppCompatActivity {
         temp.setText(timeLeftText);
         if (timeLeftText.equals("0")) {
             Registro.punt = puntuacion;
-            btn1.setEnabled(false);
-            btn2.setEnabled(false);
-            btn3.setEnabled(false);
-            btn4.setEnabled(false);
-            btn5.setEnabled(false);
-            btn6.setEnabled(false);
-            btn7.setEnabled(false);
-            btn8.setEnabled(false);
-            btn9.setEnabled(false);
+            turnOffButtons();
             temp.setText("PERDISTE");
             temp.setTextColor(Color.rgb(168,0,0));
             textSeg.setVisibility(View.INVISIBLE);
@@ -122,7 +114,53 @@ public class Juego2 extends AppCompatActivity {
         btn8 = findViewById(R.id.b8);
         btn9 = findViewById(R.id.b9);
         textoPuntos = findViewById(R.id.puntos);
+        turnOffButtons();
 
+        btn1.setOnClickListener(view -> {
+            sumarPuntos();
+            cdt.start();
+            shuffleButtons();
+        });
+        btn2.setOnClickListener(view -> {
+            sumarPuntos();
+            cdt.start();
+            shuffleButtons();
+        });
+        btn3.setOnClickListener(view -> {
+            sumarPuntos();
+            cdt.start();
+            shuffleButtons();
+        });
+        btn4.setOnClickListener(view -> {
+            sumarPuntos();
+            cdt.start();
+            shuffleButtons();
+        });
+        btn5.setOnClickListener(view -> {
+            sumarPuntos();
+            cdt.start();
+            shuffleButtons();
+        });
+        btn6.setOnClickListener(view -> {
+            sumarPuntos();
+            cdt.start();
+            shuffleButtons();
+        });
+        btn7.setOnClickListener(view -> {
+            sumarPuntos();
+            cdt.start();
+            shuffleButtons();
+        });
+        btn8.setOnClickListener(view -> {
+            sumarPuntos();
+            cdt.start();
+            shuffleButtons();
+        });
+        btn9.setOnClickListener(view -> {
+            sumarPuntos();
+            cdt.start();
+            shuffleButtons();
+        });
         shuffleButtons();
 
     }
@@ -133,7 +171,7 @@ public class Juego2 extends AppCompatActivity {
         List<ImageButton> botones = Arrays.asList(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9);
 
         if(r == ultimoColor){
-            if(r != 8){
+            if(r > 7){
                 r = 0;
             }else{
                 r++;
@@ -143,78 +181,48 @@ public class Juego2 extends AppCompatActivity {
         if (r == 0) {
             //Amarillo
             colorChange(botones,amarillo,amarilloClaro);
-            botones.get(0).setOnClickListener(view -> {
-                sumarPuntos();
-                cdt.start();
-                shuffleButtons();
-            });
+
 
         } else if (r == 1) {
             //Rojo
             colorChange(botones,rojo,rojoClaro);
-            botones.get(0).setOnClickListener(view -> {
-                sumarPuntos();
-                cdt.start();
-                shuffleButtons();
-            });
+
 
         } else if (r == 2) {
             //Verde
             colorChange(botones,verde,verdeClaro);
-            botones.get(0).setOnClickListener(view -> {
-                sumarPuntos();
-                cdt.start();
-                shuffleButtons();
-            });
+
 
         } else if (r == 3) {
             //Azul
             colorChange(botones,azul,azulClaro);
-            botones.get(0).setOnClickListener(view -> {
-                sumarPuntos();
-                cdt.start();
-                shuffleButtons();
-            });
+
 
         } else if (r == 4) {
             //Rojo
             colorChange(botones,marron,marronClaro);
-            botones.get(0).setOnClickListener(view -> {
-                sumarPuntos();
-                cdt.start();
-                shuffleButtons();
-            });
+
         } else if (r == 5) {
             //Rojo
             colorChange(botones,naranja,naranjaClaro);
-            botones.get(0).setOnClickListener(view -> {
-                sumarPuntos();
-                cdt.start();
-                shuffleButtons();
-            });
+
         } else if (r == 6) {
             //Rojo
             colorChange(botones,rosa,rosaClaro);
-            botones.get(0).setOnClickListener(view -> {
-                sumarPuntos();
-                cdt.start();
-                shuffleButtons();
-            });
+
         } else if (r == 7) {
             //Rojo
             colorChange(botones,verd,verdClaro);
-            botones.get(0).setOnClickListener(view -> {
-                sumarPuntos();
-                cdt.start();
-                shuffleButtons();
-            });
+
         }
         ultimoColor = r;
     }
 
     public void colorChange(List <ImageButton> colores, int colorComun, int colorCorrecto){
+        turnOffButtons();
         Collections.shuffle(colores);
         colores.get(0).setImageResource(colorCorrecto);
+        colores.get(0).setEnabled(true);
         colores.get(1).setImageResource(colorComun);
         colores.get(2).setImageResource(colorComun);
         colores.get(3).setImageResource(colorComun);
@@ -223,5 +231,17 @@ public class Juego2 extends AppCompatActivity {
         colores.get(6).setImageResource(colorComun);
         colores.get(7).setImageResource(colorComun);
         colores.get(8).setImageResource(colorComun);
+    }
+
+    public void turnOffButtons(){
+        btn1.setEnabled(false);
+        btn2.setEnabled(false);
+        btn3.setEnabled(false);
+        btn4.setEnabled(false);
+        btn5.setEnabled(false);
+        btn6.setEnabled(false);
+        btn7.setEnabled(false);
+        btn8.setEnabled(false);
+        btn9.setEnabled(false);
     }
 }
