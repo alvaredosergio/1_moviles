@@ -1,54 +1,43 @@
 package models;
 
-import android.widget.TextView;
-
+// Model class for User
 public class User {
     private String nombre;
-    private String correo;
-    private String color;
+    private String email;
     private int puntuacion;
 
     public User(){};
 
-    public User(String nombre, String color, String correo, int puntuacion){
+    // Constructor
+    public User(String nombre, String email, int puntuacion){
         this.nombre = nombre;
-        this.color = color;
-        this.correo = correo;
+        this.email = email;
         this.puntuacion = puntuacion;
     }
 
+    // Getters & Setters
     public String getNombre() {
         return nombre;
     }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getColor() {
-        return color;
+    public String getEmail() {
+        return email;
     }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public int getPuntuacion() {
         return puntuacion;
     }
-
     public void setPuntuacion(int puntuacion) {
         this.puntuacion = puntuacion;
     }
 
+    // compareTo order by score
     public int compareTo(User user){
         if(user.puntuacion > user.getPuntuacion()){
             return 1;
@@ -57,12 +46,12 @@ public class User {
         }
     }
 
+    // toString
     @Override
     public String toString() {
         return "User{" +
                 "nombre='" + nombre + '\'' +
-                ", color='" + color + '\'' +
-                ", correo='" + correo + '\'' +
+                ", correo='" + email + '\'' +
                 ", puntuacion=" + puntuacion +
                 '}';
     }

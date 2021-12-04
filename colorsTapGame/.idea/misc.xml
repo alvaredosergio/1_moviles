@@ -40,13 +40,17 @@
         <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/drawable/boton_redondo_verde_claro.xml" value="0.2484375" />
         <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_juego.xml" value="0.33" />
         <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_leaderboard.xml" value="0.33" />
+        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_leer.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_menu.xml" value="0.33" />
+        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_mostrar_colores.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_prueba1.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_prueba2.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/activity_registro.xml" value="0.33" />
         <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/content_prueba.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/fragment_first.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/fragment_login.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/fragment_registro.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/fragment_second.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/login_fragment.xml" value="0.1" />
         <entry key="..\:/Users/sergio/AndroidStudioProjects/colorsTapGame/app/src/main/res/layout/mensaje_view.xml" value="0.36666666666666664" />
