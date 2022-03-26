@@ -7,6 +7,24 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
+
+    public static int moves;
+
+    // Colored squares codes
+    public static String reset = "\u001B[0m";
+    public static String red = "\u001B[31m▀ ";
+    public static String blue = "\u001B[34m▀ ";
+    public static String green = "\u001B[32m▀ ";
+    public static String yellow = "\u001B[33m▀ ";
+    public static String cyan = "\u001B[36m▀ ";
+
+    //Only color
+    public static String red_ = "\u001B[31m";
+    public static String blue_ = "\u001B[34m";
+    public static String green_ = "\u001B[32m";
+    public static String yellow_ = "\u001B[33m";
+    public static String cyan_ = "\u001B[36m";
+
     public static void main(String[] args) {
         System.out.println("\r"
         + "  ____       ____              __                  _____                \r\n"
@@ -15,16 +33,11 @@ public class Game {
         + "\\___//_\\_\\ \\___/  \\__/ \\___//_/ \\___//_/  /___/  \\___/ \\_,_//_/_/_/\\__/ \r\n"
         + "                                                                        "
         + "");
-        System.out.println("You must to complete the 6x6 square like the 2x2 patron.");
+        System.out.println("You must to complete the 6x6 square like the 2x2 pattern.");
         System.out.println("Choose what COLUMN or ROW you wanna move: ('c1' = Column 1, 'r1' = Row 1, etc...)");
         System.out.println("GOOD LUCK!!\n");
 
-        // Colors codes
-        String reset = "\u001B[0m";
-        String red = "\u001B[31m▀ ";
-        String blue = "\u001B[34m▀ ";
-        String green = "\u001B[32m▀ ";
-        String yellow = "\u001B[33m▀ ";
+        
 
         // List of colors
         List <String> colors = new ArrayList <String>();
@@ -160,6 +173,7 @@ public class Game {
                 matrix[3][0] = c20;
                 matrix[4][0] = c30;
                 matrix[5][0] = c40;
+                moves++;
                 break;
                 case "c2": 
                 String c01 = matrix[0][1];
@@ -174,6 +188,7 @@ public class Game {
                 matrix[3][1] = c21;
                 matrix[4][1] = c31;
                 matrix[5][1] = c41;
+                moves++;
                 break;
                 case "c3": 
                 String c02 = matrix[0][2];
@@ -188,6 +203,7 @@ public class Game {
                 matrix[3][2] = c22;
                 matrix[4][2] = c32;
                 matrix[5][2] = c42;
+                moves++;
                 break;
                 case "c4": 
                 String c03 = matrix[0][3];
@@ -202,6 +218,7 @@ public class Game {
                 matrix[3][3] = c23;
                 matrix[4][3] = c33;
                 matrix[5][3] = c43;
+                moves++;
                 break;
                 case "c5": 
                 String c04 = matrix[0][4];
@@ -216,6 +233,7 @@ public class Game {
                 matrix[3][4] = c24;
                 matrix[4][4] = c34;
                 matrix[5][4] = c44;
+                moves++;
                 break;
                 case "c6": 
                 String c05 = matrix[0][5];
@@ -230,6 +248,7 @@ public class Game {
                 matrix[3][5] = c25;
                 matrix[4][5] = c35;
                 matrix[5][5] = c45;
+                moves++;
                 break;
                 case "r1": 
                 String r00 = matrix[0][0];
@@ -244,6 +263,7 @@ public class Game {
                 matrix[0][3] = r02;
                 matrix[0][4] = r03;
                 matrix[0][5] = r04;
+                moves++;
                 break;
                 case "r2": 
                 String r10 = matrix[1][0];
@@ -258,6 +278,7 @@ public class Game {
                 matrix[1][3] = r12;
                 matrix[1][4] = r13;
                 matrix[1][5] = r14;
+                moves++;
                 break;
                 case "r3": 
                 String r20 = matrix[2][0];
@@ -272,6 +293,7 @@ public class Game {
                 matrix[2][3] = r22;
                 matrix[2][4] = r23;
                 matrix[2][5] = r24;
+                moves++;
                 break;
                 case "r4": 
                 String r30 = matrix[3][0];
@@ -286,6 +308,7 @@ public class Game {
                 matrix[3][3] = r32;
                 matrix[3][4] = r33;
                 matrix[3][5] = r34;
+                moves++;
                 break;
                 case "r5": 
                 String r40 = matrix[4][0];
@@ -300,6 +323,7 @@ public class Game {
                 matrix[4][3] = r42;
                 matrix[4][4] = r43;
                 matrix[4][5] = r44;
+                moves++;
                 break;
                 case "r6": 
                 String r50 = matrix[5][0];
@@ -314,6 +338,7 @@ public class Game {
                 matrix[5][3] = r52;
                 matrix[5][4] = r53;
                 matrix[5][5] = r54;
+                moves++;
                 break;
 
                 default: System.out.println("The COLUMN or ROW choosed are INCORRECT. Try it again.\n");
@@ -340,10 +365,12 @@ public class Game {
         }
 
         sc.close();
-        // Print the Congratulations !
+        // Print the Congratulations
         System.out.println();
         System.out.println("CONGRATULATIONS !!");
-        System.out.println("You complete the 6x6 colors Game.");
+        System.out.println("Moves used: " + cyan_ + moves + " move/s." + reset);
+        System.out.println("You complete the "+red_+"6"+blue_+"x"+yellow_+"6 "+green_+"c"+red_+"o"+blue_
+        +"l"+yellow_+"o"+green_+"r"+red_+"s"+blue_+" "+yellow_+"G"+green_+"a"+red_+"m"+blue_+"e"+yellow_+"."+reset);
         System.out.println("\r"
         + " ______ __                      __\r\n"
         + "/_  __// /  ___   ___  ___  ___/ /\r\n"
